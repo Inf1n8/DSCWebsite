@@ -69,12 +69,12 @@ gulp.task('manifest',function () {
         .pipe(connect.reload());
 });
 gulp.task('html',function () {
-    gulp.src(`${__dirname}/src/index.html`)
+    gulp.src(`${__dirname}/src/html/*`)
         .pipe(gulp.dest(`${__dirname}/dist`))
         .pipe(connect.reload());
 });
 gulp.task('watch',function () {
-    gulp.watch(`${__dirname}/src/index.html`,['html']);
+    gulp.watch(`${__dirname}/src/html/*`,['html']);
     gulp.watch(`${__dirname}/src/manifest.json`,['manifest']);
     gulp.watch(`${__dirname}/src/css/*`,['css']);
     gulp.watch(`${__dirname}/src/js/*`,['js']);
@@ -112,7 +112,7 @@ gulp.task('build',['clean'], function() {
     gulp.src(`${__dirname}/src/manifest.json`)
         .pipe(gulp.dest(`${__dirname}/build`));
 
-    gulp.src(`${__dirname}/src/index.html`)
+    gulp.src(`${__dirname}/src/html/*`)
         .pipe(htmlmin({
                 collapseWhitespace:true,
                 minifyCSS:true,

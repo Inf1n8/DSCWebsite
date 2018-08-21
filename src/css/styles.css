@@ -1,3 +1,45 @@
-.heading{
-    color:red;
+*{
+    font-family: Roboto;
+}
+.row .col{
+    padding:0;
+}
+.nav ul a{
+    color:black;
+    padding: 0 25px;
+}
+.nav ul a:hover{
+    color: #3678f7;
+}
+.dsc-logo{
+    height: 60px;
+    margin-left: 5vw;
+}
+nav{
+    box-shadow: none;
+}
+nav .brand-logo{
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+nav [class*=mdi-], nav [class^=mdi-], nav i, nav i.material-icons{
+    font-size: 40px;
+}
+#nav-mobile{
+    margin-right: 5vw;
+}
+i.material-icons{
+    color: black!important;
+}
+@media only screen and (max-width: 650px) {
+    .dsc-logo{
+        height: 50px;
+        margin-left: 0;
+    }
+    nav{
+        position: fixed;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+    }
+
 }

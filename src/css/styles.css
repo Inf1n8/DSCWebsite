@@ -75,6 +75,9 @@ i.material-icons{
     .content-container{
         padding: 0 15px;
     }
+    .centerOnSmall{
+        text-align: center;
+    }
 
 
 }
